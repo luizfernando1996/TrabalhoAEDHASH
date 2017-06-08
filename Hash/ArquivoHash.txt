@@ -1,0 +1,26 @@
+Minas Gerais;853
+São Paulo;645
+Rio de Janeiro;92
+Espiríto Santo;78
+Rio Grande do Sul; 479
+Paraná;399
+Santa Catarina; 295
+Bahia;417
+Piauí;224
+Paraíba;223
+Maranhão;217
+Perbambuco;185
+Ceará;184
+Rio Grande do Norte;167
+Alagoas;102
+Sergipe;75
+Para;144
+Tocantis;139
+Amazonas;62
+Rondônia;52
+Acre;22
+Amapá;16
+Roraima;15
+Goiás;246
+Mato Grosso;141
+Mato Grosso do Sul;79

@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{6D49243C-3E1E-4CE1-B0C8-054ED553B2BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{ADDB2D40-65B9-4CA9-BEBE-4EF1750250FF}"
+	ProjectSection(SolutionItems) = preProject
+		ArquivoHash.txt = ArquivoHash.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controller", "Controller", "{9AAE3140-FD0F-46CC-8021-D3B73B21EF3D}"
 EndProject
