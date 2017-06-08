@@ -18,6 +18,7 @@ public class Node
     public Node Next { get => next; set => next = value; }
     #endregion
 
+    #region 'Construtor'
     public Node(string nomeDoEstado, string capitalDoEstado, string regiaoEstado, int quantMunicipios, Node proximo)
     {
         this.NomeEstado = nomeDoEstado;
@@ -26,4 +27,6 @@ public class Node
         this.QuantMunicipios = quantMunicipios;
         this.Next = proximo;
     }
+    #endregion
+ 
 }
