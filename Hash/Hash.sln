@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hash", "Hash\Hash.csproj", "{F81272E7-ECF2-41E0-8F60-147EE4246A2F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{6D49243C-3E1E-4CE1-B0C8-054ED553B2BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{ADDB2D40-65B9-4CA9-BEBE-4EF1750250FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controller", "Controller", "{9AAE3140-FD0F-46CC-8021-D3B73B21EF3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F81272E7-ECF2-41E0-8F60-147EE4246A2F} = {9AAE3140-FD0F-46CC-8021-D3B73B21EF3D}
+		{ADDB2D40-65B9-4CA9-BEBE-4EF1750250FF} = {6D49243C-3E1E-4CE1-B0C8-054ED553B2BA}
+		{9AAE3140-FD0F-46CC-8021-D3B73B21EF3D} = {6D49243C-3E1E-4CE1-B0C8-054ED553B2BA}
 	EndGlobalSection
 EndGlobal
