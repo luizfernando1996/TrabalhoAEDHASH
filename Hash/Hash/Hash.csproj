@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="MVC\Controller\Lista\Lista.cs" />
     <Compile Include="MVC\Controller\Lista\Node.cs" />
+    <Compile Include="MVC\Controller\TabelaHash\FuncaoHash.cs" />
+    <Compile Include="MVC\Controller\TabelaHash\TabelaHash.cs" />
     <Compile Include="MVC\DAL\LeituraArq\Leitura.cs" />
     <Compile Include="MVC\DAL\LeituraArq\TransmitirDados.cs" />
     <Compile Include="Program.cs" />
@@ -61,8 +63,6 @@
     <Content Include="MVC\DAL\Arquivos\CodificaoArquivo.png" />
     <Content Include="MVC\DAL\Bitmap1.bmp" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MVC\Controller\TabelaHash\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
