@@ -37,9 +37,6 @@ namespace Hash.MVC.Controller.TabelaHash
         public void insereLista()
         {
 
-
-
-
         }
 
 
