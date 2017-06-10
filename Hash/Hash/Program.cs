@@ -44,7 +44,7 @@ namespace Hash
             }
             return tamanhoHash;
         }
-       public static int RecebeEstruturaDeDados()
+        public static int RecebeEstruturaDeDados()
         {
             string opcaoSelecionada;
             int opcaoListaEncadeada = 1;
