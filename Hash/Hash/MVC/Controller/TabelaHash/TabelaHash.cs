@@ -34,6 +34,7 @@ namespace Hash.MVC.Controller.TabelaHash
         }
 
 
+        #region inserção aberta
         private void insereAberto(Node obj)
         {            
             int posicao = FuncaoHash.EncontraPosicao(obj.NomeEstado, tamanho);
@@ -68,6 +69,11 @@ namespace Hash.MVC.Controller.TabelaHash
             }           
 
         }
+        #endregion;
+
+
+
+
 
     }
 }

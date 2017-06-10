@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Hash.MVC.DAL.LeituraArq;
+using Hash.MVC.Controller.TabelaHash;
 
 namespace Hash
 {
@@ -13,8 +14,8 @@ namespace Hash
         static void Main(string[] args)
         {
 
-            recebeTamanhoDaEntrada();
-            RecebeEstruturaDeDados();
+            int tamanho = recebeTamanhoDaEntrada();
+            RecebeEstruturaDeDados(tamanho);
             Console.ReadKey();
 
             Leitura objLer = new Leitura();
@@ -44,7 +45,7 @@ namespace Hash
             }
             return tamanhoHash;
         }
-        public static int RecebeEstruturaDeDados()
+        public static int RecebeEstruturaDeDados(int tamanho)
         {
             string opcaoSelecionada;
             int opcaoListaEncadeada = 1;
@@ -59,6 +60,15 @@ namespace Hash
                 if (numeroInteiro)
                 {
                     sair = true;
+                    if (opcaoListaEncadeada == 1)
+                    {
+
+                    }
+                    else if (opcaoListaEncadeada == 2)
+                    {
+                        TabelaHash tabela = new TabelaHash(tamanho, "2");
+
+                    }
                 }
                 else
                     Console.WriteLine("\nDigite numero inteiros para selecionar a estrutura de dados por favor");
