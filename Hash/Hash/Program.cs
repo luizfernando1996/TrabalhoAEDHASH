@@ -11,7 +11,7 @@ namespace Hash
 
         static void Main(string[] args)
         {
-            
+            Leitura objLer = new Leitura();
         }
 
     }

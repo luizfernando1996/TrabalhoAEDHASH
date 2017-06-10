@@ -42,11 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MVC\Controller\Lista\Lista.cs" />
+    <Compile Include="MVC\Controller\Lista\Node.cs" />
+    <Compile Include="MVC\DAL\LeituraArq\Leitura.cs" />
+    <Compile Include="MVC\DAL\LeituraArq\TransmitirDados.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArquivoHash.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MVC\Controller\TabelaHash\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
