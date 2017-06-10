@@ -33,18 +33,25 @@ namespace Hash.MVC.Controller.TabelaHash
             }
         }
 
+        #region "Insere Na Lista"
+        public void insereLista()
+        {
+        }
+        
+        
+        #endregion
 
         private void insereAberto(Node obj)
-        {            
+        {
             int posicao = FuncaoHash.EncontraPosicao(obj.NomeEstado, tamanho);
             int i = 0;
             bool inserido = false;
 
             while (i < tabela.Length)
             {
-                if(i == posicao)
+                if (i == posicao)
                 {
-                    if(tabela[i] == null)
+                    if (tabela[i] == null)
                     {
                         tabela[i] = obj;
                         inserido = true;
@@ -58,14 +65,14 @@ namespace Hash.MVC.Controller.TabelaHash
                 i++;
             }
 
-            if(inserido == false)
+            if (inserido == false)
             {
                 posicao = 0;
                 insereAberto(obj);
 
                 if (inserido == false)
                     Console.WriteLine("Não há espaço para inserir todos os estados escolha um tamanho de hash maior!");
-            }           
+            }
 
         }
 

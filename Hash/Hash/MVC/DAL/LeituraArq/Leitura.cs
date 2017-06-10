@@ -12,11 +12,13 @@ namespace Hash.MVC.DAL.LeituraArq
     class Leitura
     {
         //caminho relativo implementado
-        string pathArquivo3 = "../../MVC/DAL/Arquivos/ArquivoHash.txt";
+        private string pathArquivo3 = "../../MVC/DAL/Arquivos/ArquivoHash.txt";
 
-        private Lista objLista = new Lista();
+        private string[,] registros = new string[27,3];
+        private static int indice = 0;
+        private bool indiceExcedido = false;
 
-        internal Lista ObjLista { get => objLista; set => objLista = value; }
+        public string[,] Registros { get => registros; set => registros = value; }
 
         public void lerArquivo()
         {
@@ -37,7 +39,19 @@ namespace Hash.MVC.DAL.LeituraArq
 
         }
         public void criarObjeto(string[]frase) {
-            ObjLista.insereLista(frase[0],frase[1],frase[2],frase[3]);
+
+            if (indiceExcedido.Equals(false))
+            {
+                Registros[indice, 0] = frase[0];
+                Registros[indice, 0] = frase[1];
+                Registros[indice, 0] = frase[2];
+                Registros[indice, 0] = frase[3];
+            }
+
+            if (indice < 27)
+                indice++;
+            else
+                indiceExcedido = true;
         }
 
 
