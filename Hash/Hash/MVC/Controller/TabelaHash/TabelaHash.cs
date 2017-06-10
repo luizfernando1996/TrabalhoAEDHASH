@@ -36,19 +36,27 @@ namespace Hash.MVC.Controller.TabelaHash
         #region "Insere Na Lista"
         public void insereLista()
         {
+
+
+
+
         }
-        
-        
+
+
         #endregion
+        int posicao;
 
         #region inserção aberta
         private void insereAberto(Node obj)
         {
-            int posicao = FuncaoHash.EncontraPosicao(obj.NomeEstado, tamanho);
+            if(obj != null)            
+             posicao = FuncaoHash.EncontraPosicao(obj.NomeEstado, tamanho);
+            int inicial = posicao;
+
             int i = 0;
             bool inserido = false;
 
-            while (i < tabela.Length)
+            while (i < tabela.Length && inserido != true)
             {
                 if (i == posicao)
                 {
@@ -68,8 +76,26 @@ namespace Hash.MVC.Controller.TabelaHash
 
             if (inserido == false)
             {
+                i = 0;
                 posicao = 0;
-                insereAberto(obj);
+
+                while (i < inicial && inserido != true)
+                {
+                    if (i == posicao)
+                    {
+                        if (tabela[i] == null)
+                        {
+                            tabela[i] = obj;
+                            inserido = true;
+                        }
+                        else
+                        {
+                            colisoes++;
+                            posicao++;
+                        }
+                    }
+                    i++;
+                }
 
                 if (inserido == false)
                     Console.WriteLine("Não há espaço para inserir todos os estados escolha um tamanho de hash maior!");
