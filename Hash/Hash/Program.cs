@@ -19,7 +19,7 @@ namespace Hash
             Console.ReadKey();
 
             Leitura objLer = new Leitura();
-            objLer.lerArquivo();
+
             Console.ReadKey();
 
         }
@@ -74,7 +74,18 @@ namespace Hash
                     Console.WriteLine("\nDigite numero inteiros para selecionar a estrutura de dados por favor");
             }
             return opcaoListaEncadeada;
+        }
 
+        public bool verificarNumero1E2(int num)
+        {
+            bool numeroEntreValoresAceitaveis;
+
+            if (num == 1 || num == 2)
+                numeroEntreValoresAceitaveis = true;
+            else
+                numeroEntreValoresAceitaveis = false;
+
+            return numeroEntreValoresAceitaveis;
         }
     }
 }
