@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="MVC\Controller\Lista\Lista.cs" />
     <Compile Include="MVC\Controller\Lista\Node.cs" />
-    <Compile Include="MVC\Controller\Lista\TabelaHash.cs" />
     <Compile Include="MVC\Controller\TabelaHash\FuncaoHash.cs" />
     <Compile Include="MVC\Controller\TabelaHash\TabelaHash.cs" />
     <Compile Include="MVC\DAL\LeituraArq\Leitura.cs" />

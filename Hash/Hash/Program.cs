@@ -19,7 +19,7 @@ namespace Hash
             Console.ReadKey();
 
             Leitura objLer = new Leitura();
-            objLer.lerArquivo();
+            
             Console.ReadKey();
 
         }
@@ -38,7 +38,6 @@ namespace Hash
                 if (tamanhoTabelaExiste)
                 {
                     sair = true;
-
                 }
                 else
                     Console.WriteLine("\nDigite numero inteiro para o tamanho da tabela por favor");
@@ -67,6 +66,14 @@ namespace Hash
                     else if (opcaoListaEncadeada == 2)
                     {
                         TabelaHash tabela = new TabelaHash(tamanho, "2");
+                        Leitura let = new Leitura();
+
+                        for (int i = 0; i < let.vetorEstados.Length; i++ )
+                        {
+                            tabela.insereHash(let.vetorEstados[i]);
+                        }
+
+                        Console.WriteLine("Quantidade de colisões = " + tabela.colisoes);
 
                     }
                 }
