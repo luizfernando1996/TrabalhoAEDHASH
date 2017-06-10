@@ -62,7 +62,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="MVC\DAL\Arquivos\CodificaoArquivo.png" />
-    <Content Include="MVC\DAL\Bitmap1.bmp" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
