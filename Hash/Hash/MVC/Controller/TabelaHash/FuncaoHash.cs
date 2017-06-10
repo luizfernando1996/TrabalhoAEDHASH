@@ -98,8 +98,9 @@ namespace Hash.MVC.Controller.TabelaHash
         public static int EncontraPosicao(string palavra, int tamanhoHash)
         {
             int soma = 0;
+            palavra = palavra.ToUpper();
 
-            foreach(char item in palavra.ToUpper())
+            foreach (char item in palavra)
             {
                 soma += valorLetra(item);
             }

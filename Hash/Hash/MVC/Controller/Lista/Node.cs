@@ -12,7 +12,7 @@ namespace Hash.MVC.Controller.Lista
         private string nomeEstado;
         private string capitalEstado;
         private string regiaoDoEstado;
-        private int quantMunicipios;
+        private string quantMunicipios;
         private Node next;
         #endregion
 
@@ -20,12 +20,12 @@ namespace Hash.MVC.Controller.Lista
         public string NomeEstado { get => nomeEstado; set => nomeEstado = value; }
         public string CapitalEstado { get => capitalEstado; set => capitalEstado = value; }
         public string RegiaoDoEstado { get => regiaoDoEstado; set => regiaoDoEstado = value; }
-        public int QuantMunicipios { get => quantMunicipios; set => quantMunicipios = value; }
+        public string QuantMunicipios { get => quantMunicipios; set => quantMunicipios = value; }
         public Node Next { get => next; set => next = value; }
         #endregion
 
         #region 'Construtor'
-        public Node(string nomeDoEstado,  string regiaoEstado, string capitalDoEstado, int quantMunicipios, Node proximo)
+        public Node(string nomeDoEstado,  string regiaoEstado, string capitalDoEstado, string quantMunicipios, Node proximo)
         {
             this.NomeEstado = nomeDoEstado;
             this.CapitalEstado = capitalDoEstado;

@@ -15,7 +15,7 @@ namespace Hash.MVC.Controller.Lista
             return inicio == null;
         }
 
-        public void insereLista(string nome, string regiao, string capital, int qtdeMunicipios)
+        public void insereLista(string nome, string regiao, string capital, string qtdeMunicipios)
         {
             Node novo = new Node(nome, regiao, capital, qtdeMunicipios, null);
 
