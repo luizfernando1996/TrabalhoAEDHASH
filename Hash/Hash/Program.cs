@@ -68,7 +68,7 @@ namespace Hash
                         TabelaHash tabela = new TabelaHash(tamanho, "2");
                         Leitura let = new Leitura();
 
-                        for (int i = 0; i < let.vetorEstados.Length; i++ )
+                        for (int i = 0; i < 26; i++ )
                         {
                             tabela.insereHash(let.vetorEstados[i]);
                         }
