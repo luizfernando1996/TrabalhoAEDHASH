@@ -12,8 +12,6 @@ namespace Hash.MVC.Controller.TabelaHash
         public string tipoDeTratamento;
 
 
-
-
-
+       
     }
 }
