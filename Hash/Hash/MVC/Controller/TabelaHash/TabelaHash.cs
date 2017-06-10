@@ -11,7 +11,5 @@ namespace Hash.MVC.Controller.TabelaHash
         public int tamanho;
         public string tipoDeTratamento;
 
-
-       
     }
 }
