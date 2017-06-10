@@ -25,7 +25,7 @@ namespace Hash.MVC.Controller.Lista
         #endregion
 
         #region 'Construtor'
-        public Node(string nomeDoEstado, string capitalDoEstado, string regiaoEstado, int quantMunicipios, Node proximo)
+        public Node(string nomeDoEstado,  string regiaoEstado, string capitalDoEstado, int quantMunicipios, Node proximo)
         {
             this.NomeEstado = nomeDoEstado;
             this.CapitalEstado = capitalDoEstado;
