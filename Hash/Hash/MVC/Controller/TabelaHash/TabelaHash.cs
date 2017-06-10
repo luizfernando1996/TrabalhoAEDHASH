@@ -23,9 +23,9 @@ namespace Hash.MVC.Controller.TabelaHash
 
         public void insereHash(Node obj)
         {
-            if (tipoDeTratamento == "aberto")
+            if (tipoDeTratamento == "2")
             {
-                insereAberto
+                insereAberto(obj);
             }
             else
             {
@@ -35,8 +35,7 @@ namespace Hash.MVC.Controller.TabelaHash
 
 
         private void insereAberto(Node obj)
-        {
-            
+        {            
             int posicao = FuncaoHash.EncontraPosicao(obj.NomeEstado, tamanho);
             int i = 0;
             bool inserido = false;
