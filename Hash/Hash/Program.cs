@@ -61,7 +61,15 @@ namespace Hash
                     sair = true;
                     if (opcaoListaEncadeada == 1)
                     {
+                        TabelaHash tabela = new TabelaHash(tamanho, "1");
+                        Leitura let = new Leitura();
 
+                        for (int i = 0; i < 26; i++)
+                        {
+                            tabela.insereHash(let.vetorEstados[i]);
+                        }
+
+                        Console.WriteLine("Quantidade de colisões = " + tabela.colisoes);
                     }
                     else if (opcaoListaEncadeada == 2)
                     {

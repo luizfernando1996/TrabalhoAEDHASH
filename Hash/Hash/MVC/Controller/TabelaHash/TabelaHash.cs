@@ -12,7 +12,11 @@ namespace Hash.MVC.Controller.TabelaHash
         public int tamanho;
         public string tipoDeTratamento;
         public int colisoes = 0;
-        public Node[] tabela;
+        public Node[] tabela; 
+
+
+
+
 
         public TabelaHash(int tamanho, string tipoDeTratamento)
         {
@@ -29,13 +33,40 @@ namespace Hash.MVC.Controller.TabelaHash
             }
             else
             {
-
+                insereLista(obj);
             }
         }
 
         #region "Insere Na Lista"
-        public void insereLista()
-        {
+        public void insereLista(Node obj)
+        { 
+            int j = 0;
+            posicao = FuncaoHash.EncontraPosicao(obj.NomeEstado, tamanho);
+            bool inserido = false;
+
+            while(j < tabela.Length && inserido != true)
+            {
+                if (j == posicao)
+                {                    
+                    if (tabela[j] == null)
+                    {
+                        tabela[j] = obj;
+                        inserido = true;
+                    }
+                    else
+                    {
+                        Node p = tabela[j];
+                        colisoes++;
+                        while (p.Next != null)
+                        {
+                            p = p.Next;
+                        }
+
+                        p.Next = obj;
+                    }
+                }
+                j++;
+            }
 
         }
 
