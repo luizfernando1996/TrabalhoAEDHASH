@@ -51,8 +51,9 @@ namespace Hash
             bool sair = false;
             while (sair.Equals(false))
             {
-                Console.WriteLine("Digite 1 para selecionar a estrutura de dados de listas encadeada");
-                Console.WriteLine("Digite 2 para selecionar a estrutura de dados de endereçamento aberto");
+               
+                Console.WriteLine("Digite 1 para selecionar a estrutura de dados de endereçamento aberto");
+                Console.WriteLine("Digite 2 para selecionar a estrutura de dados de listas encadeada");
                 opcaoSelecionada = Console.ReadLine();
 
                 bool numeroInteiro = int.TryParse(opcaoSelecionada, out opcaoListaEncadeada);
@@ -70,6 +71,8 @@ namespace Hash
                         }
 
                         Console.WriteLine("Quantidade de colisões = " + tabela.colisoes);
+                        string opcaoEstado =;//chama o metodo do menu de o~ções de estado
+                        tabela.imprime(opcaoEstado);
                     }
                     else if (opcaoListaEncadeada == 2)
                     {
@@ -79,10 +82,13 @@ namespace Hash
                         for (int i = 0; i < 26; i++ )
                         {
                             tabela.insereHash(let.vetorEstados[i]);
-                        }
-
+                        }                       
+                       
                         Console.WriteLine("Quantidade de colisões = " + tabela.colisoes);
-                        tabela.imprime("Paraiba");
+                        string opcaoEstado =;//chama o metodo do menu de o~ções de estado
+                        tabela.imprime(opcaoEstado);
+
+
                     }
                 }
                 else
