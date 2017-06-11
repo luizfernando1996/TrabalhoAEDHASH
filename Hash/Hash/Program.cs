@@ -19,7 +19,7 @@ namespace Hash
             Console.ReadKey();
 
             Leitura objLer = new Leitura();
-
+            
             Console.ReadKey();
 
         }
@@ -38,7 +38,6 @@ namespace Hash
                 if (tamanhoTabelaExiste)
                 {
                     sair = true;
-
                 }
                 else
                     Console.WriteLine("\nDigite numero inteiro para o tamanho da tabela por favor");
@@ -62,11 +61,27 @@ namespace Hash
                     sair = true;
                     if (opcaoListaEncadeada == 1)
                     {
+                        TabelaHash tabela = new TabelaHash(tamanho, "1");
+                        Leitura let = new Leitura();
 
+                        for (int i = 0; i < 26; i++)
+                        {
+                            tabela.insereHash(let.vetorEstados[i]);
+                        }
+
+                        Console.WriteLine("Quantidade de colisões = " + tabela.colisoes);
                     }
                     else if (opcaoListaEncadeada == 2)
                     {
                         TabelaHash tabela = new TabelaHash(tamanho, "2");
+                        Leitura let = new Leitura();
+
+                        for (int i = 0; i < 26; i++ )
+                        {
+                            tabela.insereHash(let.vetorEstados[i]);
+                        }
+
+                        Console.WriteLine("Quantidade de colisões = " + tabela.colisoes);
 
                     }
                 }
@@ -74,18 +89,7 @@ namespace Hash
                     Console.WriteLine("\nDigite numero inteiros para selecionar a estrutura de dados por favor");
             }
             return opcaoListaEncadeada;
-        }
 
-        public bool verificarNumero1E2(int num)
-        {
-            bool numeroEntreValoresAceitaveis;
-
-            if (num == 1 || num == 2)
-                numeroEntreValoresAceitaveis = true;
-            else
-                numeroEntreValoresAceitaveis = false;
-
-            return numeroEntreValoresAceitaveis;
         }
     }
 }
