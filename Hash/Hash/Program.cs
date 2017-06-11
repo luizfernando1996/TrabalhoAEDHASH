@@ -82,7 +82,7 @@ namespace Hash
                         }
 
                         Console.WriteLine("Quantidade de colisões = " + tabela.colisoes);
-
+                        tabela.imprime("Paraiba");
                     }
                 }
                 else
