@@ -25,7 +25,7 @@ namespace Hash.MVC.Controller.TabelaHash
 
         public void insereHash(Node obj)
         {
-            if (tipoDeTratamento == "2")
+            if (tipoDeTratamento == "1")
             {
                 insereAberto(obj);
             }
@@ -123,50 +123,60 @@ namespace Hash.MVC.Controller.TabelaHash
                 }
 
                 if (inserido == false)
-                    Console.WriteLine("Não há espaço para inserir todos os estados escolha um tamanho de hash maior!");
+                {
+                    Console.WriteLine("Não há espaço para inserir todos os estados escolha um tamanho de hash maior!");                    
+                }
+                    
             }
 
         }
         #endregion;
 
-
+        #region 'Imprime"
         public void imprime(string estado)
         {
+            bool imprimiu = false;
 
             for (int j = 0; j < tabela.Length; j++)
-            {                
+            {
+                if (tabela[j] == null) { }
 
-                if(tabela[j].NomeEstado == estado)
-                {
-                    Console.WriteLine(estado);
-                    Console.WriteLine("Região: " + tabela[j].RegiaoDoEstado);
-                    Console.WriteLine("Capital: " + tabela[j].CapitalEstado);
-                    Console.WriteLine("Quantidade de Municípios: " + tabela[j].QuantMunicipios);
-                }
                 else
                 {
-                    if(tabela[j].Next != null)
+                    if (tabela[j].NomeEstado == estado)
                     {
-                        while(tabela[j].Next != null && tabela[j].Next.NomeEstado != estado)
+                        imprimiu = true;
+                        Console.WriteLine(estado);
+                        Console.WriteLine("Região: " + tabela[j].RegiaoDoEstado);
+                        Console.WriteLine("Capital: " + tabela[j].CapitalEstado);
+                        Console.WriteLine("Quantidade de Municípios: " + tabela[j].QuantMunicipios);
+                    }
+                    else
+                    {
+                        if (tabela[j].Next != null)
                         {
-                            tabela[j] = tabela[j].Next;
-                        }
-                        if(tabela[j].Next.NomeEstado == estado)
-                        {
-                            Console.WriteLine(estado);
-                            Console.WriteLine("Região: " + tabela[j].RegiaoDoEstado);
-                            Console.WriteLine("Capital: " + tabela[j].CapitalEstado);
-                            Console.WriteLine("Quantidade de Municípios: " + tabela[j].QuantMunicipios);
+                            while (tabela[j].Next != null && tabela[j].Next.NomeEstado != estado)
+                            {
+                                tabela[j] = tabela[j].Next;
+                            }
+                            if (tabela[j].Next != null)//tabela[j].Next.NomeEstado == estado
+                            {
+                                imprimiu = true;
+                                Console.WriteLine(estado);
+                                Console.WriteLine("Região: " + tabela[j].RegiaoDoEstado);
+                                Console.WriteLine("Capital: " + tabela[j].CapitalEstado);
+                                Console.WriteLine("Quantidade de Municípios: " + tabela[j].QuantMunicipios);
+                            }
                         }
                     }
                 }
+               
             }
+            if (imprimiu == false)
+                Console.WriteLine("Estado não encontrado na tabela");           
 
         }
-
-
-
-
+        #endregion
 
 
     }
