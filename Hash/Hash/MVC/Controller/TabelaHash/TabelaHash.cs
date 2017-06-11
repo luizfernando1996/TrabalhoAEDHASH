@@ -16,8 +16,6 @@ namespace Hash.MVC.Controller.TabelaHash
 
 
 
-
-
         public TabelaHash(int tamanho, string tipoDeTratamento)
         {
             this.tamanho = tamanho;
@@ -67,7 +65,6 @@ namespace Hash.MVC.Controller.TabelaHash
                 }
                 j++;
             }
-
         }
 
 
@@ -131,6 +128,42 @@ namespace Hash.MVC.Controller.TabelaHash
 
         }
         #endregion;
+
+
+        public void imprime(string estado)
+        {
+
+            for (int j = 0; j < tabela.Length; j++)
+            {                
+
+                if(tabela[j].NomeEstado == estado)
+                {
+                    Console.WriteLine(estado);
+                    Console.WriteLine("Região: " + tabela[j].RegiaoDoEstado);
+                    Console.WriteLine("Capital: " + tabela[j].CapitalEstado);
+                    Console.WriteLine("Quantidade de Municípios: " + tabela[j].QuantMunicipios);
+                }
+                else
+                {
+                    if(tabela[j].Next != null)
+                    {
+                        while(tabela[j].Next != null && tabela[j].Next.NomeEstado != estado)
+                        {
+                            tabela[j] = tabela[j].Next;
+                        }
+                        if(tabela[j].Next.NomeEstado == estado)
+                        {
+                            Console.WriteLine(estado);
+                            Console.WriteLine("Região: " + tabela[j].RegiaoDoEstado);
+                            Console.WriteLine("Capital: " + tabela[j].CapitalEstado);
+                            Console.WriteLine("Quantidade de Municípios: " + tabela[j].QuantMunicipios);
+                        }
+                    }
+                }
+            }
+
+        }
+
 
 
 
